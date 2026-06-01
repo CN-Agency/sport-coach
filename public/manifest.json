@@ -1,9 +1,13 @@
 {
   "name": "Home Workout — Séances de sport à la maison",
   "short_name": "Workout",
+<<<<<<< HEAD
   "description": "Créez, organisez et exécutez vos séances de sport à la maison : éditeur par blocs, lecteur avec compte à rebours, signaux sonores et commande vocale. 100% local, sans inscription.",
   "lang": "fr",
   "dir": "ltr",
+=======
+  "description": "Application de séances de sport à la maison — créez et jouez vos entraînements personnalisés.",
+>>>>>>> 15e2c496d025aac98e12fedbb11e183ee3dd6a9d
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
@@ -12,7 +16,12 @@
   "theme_color": "#0f172a",
   "categories": ["health", "fitness", "sports", "lifestyle"],
   "icons": [
+<<<<<<< HEAD
     { "src": "/favicon.svg", "sizes": "192x192", "type": "image/svg+xml", "purpose": "any" },
     { "src": "/favicon.svg", "sizes": "512x512", "type": "image/svg+xml", "purpose": "any maskable" }
+=======
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "/logo.svg",    "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+>>>>>>> 15e2c496d025aac98e12fedbb11e183ee3dd6a9d
   ]
 }
