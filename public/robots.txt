@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Pages dynamiques / privées (données en localStorage, sans intérêt pour l'indexation)
+Disallow: /player/
+Disallow: /builder/
+
+Sitemap: https://sport.cn-agency.fr/sitemap.xml

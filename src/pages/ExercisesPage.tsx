@@ -7,12 +7,19 @@ import { ConfirmDialog } from '../components/ui/ConfirmDialog';
 import { uid } from '../utils/uid';
 import type { Exercise, ExerciseCategory, Difficulty, MuscleGroup } from '../types/exercise';
 import { CATEGORY_LABELS, CATEGORY_COLORS, DIFFICULTY_LABELS, DIFFICULTY_COLORS, MUSCLE_LABELS } from '../types/exercise';
+import { useSeo } from '../hooks/useSeo';
 
 const ALL_CATEGORIES: ExerciseCategory[] = ['upper', 'lower', 'core', 'cardio', 'stretch', 'full-body'];
 const ALL_DIFFICULTIES: Difficulty[] = ['easy', 'medium', 'hard'];
 const ALL_MUSCLES: MuscleGroup[] = ['chest', 'back', 'shoulders', 'biceps', 'triceps', 'quads', 'hamstrings', 'glutes', 'calves', 'abs', 'obliques', 'full'];
 
 export function ExercisesPage() {
+  useSeo({
+    title: 'Bibliothèque d\'exercices',
+    description:
+      'Parcourez la bibliothèque d\'exercices : haut du corps, bas du corps, gainage, cardio et étirements. Filtrez par groupe musculaire et difficulté, ou créez vos propres exercices.',
+    path: '/exercises',
+  });
   const { exercises, addCustomExercise, deleteCustomExercise } = useExercises();
   const { sessions } = useWorkout();
   const [search, setSearch] = useState('');

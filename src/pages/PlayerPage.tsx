@@ -33,6 +33,7 @@ import { HelpButton } from '../components/ui/HelpPanel';
 import { useWakeLock } from '../hooks/useWakeLock';
 import { useIsLandscape } from '../hooks/useOrientation';
 import { useKeyboardShortcuts } from '../hooks/useKeyboardShortcuts';
+import { useSeo } from '../hooks/useSeo';
 
 function blockColor(type: string): string {
   switch (type) {
@@ -69,6 +70,11 @@ export function PlayerPage() {
   const prevIndexRef = useRef(-1);
 
   const session = id ? getSession(id) : undefined;
+
+  useSeo({
+    title: session ? `Séance · ${session.name}` : 'Séance en cours',
+    description: 'Lecteur de séance avec compte à rebours, signaux sonores et commande vocale.',
+  });
 
   const handleFinish = useCallback(
     (log: WorkoutLog) => {

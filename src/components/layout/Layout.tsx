@@ -55,6 +55,23 @@ export function Layout({ children }: { children: ReactNode }) {
       {/* Main content — add bottom padding for mobile nav */}
       <main className={`mx-auto max-w-3xl px-4 py-6 ${!isBuilder ? 'pb-24 sm:pb-6' : ''}`}>{children}</main>
 
+      {/* Footer with attribution / backlink */}
+      {!isBuilder && (
+        <footer className="mx-auto max-w-3xl px-4 pb-24 pt-2 text-center sm:pb-8">
+          <p className="text-xs text-slate-400 dark:text-slate-500">
+            Réalisé par{' '}
+            <a
+              href="https://cn-agency.fr/"
+              target="_blank"
+              rel="noopener"
+              className="font-medium text-emerald-600 transition-colors hover:text-emerald-500 dark:text-emerald-400 dark:hover:text-emerald-300"
+            >
+              CN Agency
+            </a>
+          </p>
+        </footer>
+      )}
+
       {/* Bottom navigation (mobile only, not in builder) */}
       {!isBuilder && (
         <nav className="fixed inset-x-0 bottom-0 z-40 border-t border-slate-200 bg-white/90 backdrop-blur-sm sm:hidden dark:border-slate-700/50 dark:bg-slate-900/90">

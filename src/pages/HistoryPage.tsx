@@ -6,6 +6,7 @@ import { exportLog } from '../utils/exportImport';
 import { exportTcx } from '../utils/exportTcx';
 import { formatDuration } from '../utils/estimateDuration';
 import type { WorkoutLog } from '../types/workout';
+import { useSeo } from '../hooks/useSeo';
 
 function WeeklyBarChart({ logs }: { logs: WorkoutLog[] }) {
   const days = useMemo(() => {
@@ -39,6 +40,12 @@ function WeeklyBarChart({ logs }: { logs: WorkoutLog[] }) {
 }
 
 export function HistoryPage() {
+  useSeo({
+    title: 'Historique & statistiques',
+    description:
+      'Suivez votre progression : historique de vos séances, séries (streak), temps total et statistiques hebdomadaires de vos entraînements à la maison.',
+    path: '/history',
+  });
   const { logs, deleteLog } = useWorkout();
   const [deleteTarget, setDeleteTarget] = useState<string | null>(null);
   const [filter, setFilter] = useState<'all' | 'week' | 'month'>('all');

@@ -4,8 +4,15 @@ import { useTheme } from '../stores/themeStore';
 import { useSettings } from '../stores/settingsStore';
 import { useWorkout } from '../stores/workoutStore';
 import { ConfirmDialog } from '../components/ui/ConfirmDialog';
+import { useSeo } from '../hooks/useSeo';
 
 export function SettingsPage() {
+  useSeo({
+    title: 'Réglages',
+    description:
+      'Personnalisez Home Workout : profil, apparence (thème clair/sombre), gestion et sauvegarde de vos données. Tout reste stocké localement sur votre appareil.',
+    path: '/settings',
+  });
   const { theme, setTheme } = useTheme();
   const { settings, updateSettings } = useSettings();
   const { sessions, logs } = useWorkout();
@@ -169,6 +176,18 @@ export function SettingsPage() {
         <div className="rounded-2xl bg-white p-4 shadow dark:bg-slate-800">
           <p className="text-sm text-slate-600 dark:text-slate-300">Home Workout v1.0.0</p>
           <p className="mt-1 text-xs text-slate-400 dark:text-slate-500">Application de séances de sport à la maison. Toutes les données sont stockées localement.</p>
+          <p className="mt-3 border-t border-slate-100 pt-3 text-xs text-slate-400 dark:border-slate-700/50 dark:text-slate-500">
+            Conçu et réalisé par{' '}
+            <a
+              href="https://cn-agency.fr/"
+              target="_blank"
+              rel="noopener"
+              className="font-medium text-emerald-600 hover:underline dark:text-emerald-400"
+            >
+              CN Agency
+            </a>
+            , agence web — création de sites et d&apos;applications sur mesure.
+          </p>
         </div>
       </section>
 

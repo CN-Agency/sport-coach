@@ -22,8 +22,15 @@ import { estimateDuration, formatDuration } from '../utils/estimateDuration';
 import { importSession } from '../utils/exportImport';
 import { HelpButton } from '../components/ui/HelpPanel';
 import { TEMPLATES } from '../data/templates';
+import { useSeo } from '../hooks/useSeo';
 
 export function HomePage() {
+  useSeo({
+    title: 'Vos séances de sport à la maison',
+    description:
+      'Créez, organisez et lancez vos séances de sport à la maison. Éditeur visuel par blocs, lecteur avec compte à rebours, signaux sonores et commande vocale. 100% local, sans inscription.',
+    path: '/',
+  });
   const navigate = useNavigate();
   const { sessions, logs, createSession, updateSession, deleteSession, duplicateSession, importSession: importToStore } = useWorkout();
   const [showCreate, setShowCreate] = useState(false);

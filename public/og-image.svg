@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#1e293b"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.85" cy="0.15" r="0.8">
+      <stop offset="0" stop-color="#10b981" stop-opacity="0.25"/>
+      <stop offset="1" stop-color="#10b981" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+
+  <!-- Dumbbell icon -->
+  <g transform="translate(96, 150)" stroke="#34d399" stroke-width="11" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <path d="M14 30 v60"/>
+    <path d="M14 38 v44" transform="translate(22,0)"/>
+    <path d="M120 30 v60"/>
+    <path d="M120 38 v44" transform="translate(-22,0)"/>
+    <path d="M36 60 h62"/>
+  </g>
+
+  <!-- Title -->
+  <text x="96" y="330" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="86" font-weight="800" fill="#f8fafc">Home Workout</text>
+  <text x="96" y="408" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="40" font-weight="500" fill="#94a3b8">Vos séances de sport à la maison</text>
+
+  <!-- Feature pills -->
+  <g font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="26" font-weight="600">
+    <rect x="96" y="452" rx="26" width="252" height="52" fill="#10b981" fill-opacity="0.15" stroke="#10b981" stroke-opacity="0.4"/>
+    <text x="222" y="486" fill="#34d399" text-anchor="middle">Éditeur par blocs</text>
+
+    <rect x="368" y="452" rx="26" width="226" height="52" fill="#10b981" fill-opacity="0.15" stroke="#10b981" stroke-opacity="0.4"/>
+    <text x="481" y="486" fill="#34d399" text-anchor="middle">Commande vocale</text>
+
+    <rect x="614" y="452" rx="26" width="186" height="52" fill="#10b981" fill-opacity="0.15" stroke="#10b981" stroke-opacity="0.4"/>
+    <text x="707" y="486" fill="#34d399" text-anchor="middle">100% local</text>
+  </g>
+
+  <!-- Attribution -->
+  <text x="96" y="572" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="24" font-weight="500" fill="#64748b">Réalisé par CN Agency — cn-agency.fr</text>
+</svg>

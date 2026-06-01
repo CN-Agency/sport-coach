@@ -20,6 +20,7 @@ import type { Block } from '../types/workout';
 import { uid } from '../utils/uid';
 import { estimateDuration, formatDuration } from '../utils/estimateDuration';
 import { exportSession } from '../utils/exportImport';
+import { useSeo } from '../hooks/useSeo';
 
 const BLOCK_TEMPLATES: { type: Block['type']; label: string; icon: typeof Dumbbell }[] = [
   { type: 'exercise-reps', label: 'Exercice (reps)', icon: Dumbbell },
@@ -55,6 +56,11 @@ export function BuilderPage() {
   const dragIdxRef = useRef<number | null>(null);
   const [showAddPanel, setShowAddPanel] = useState(false);
   const [lastAddedId, setLastAddedId] = useState<string | null>(null);
+
+  useSeo({
+    title: name ? `Édition · ${name}` : 'Créer une séance',
+    description: 'Composez votre séance de sport bloc par bloc : exercices, répétitions, durées et temps de repos.',
+  });
 
   useEffect(() => {
     if (id) {
