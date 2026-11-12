@@ -19,7 +19,7 @@ RUN npm install -g npm@11
 # The wrapper package.json must not be named "serve": image scanners read it as an ancient
 # serve@1.0.0 and report every serve CVE prior to 10.1.2.
 WORKDIR /opt/serve
-RUN printf '%s' '{"name":"pixel-art-draw-runtime","private":true,"overrides":{"compression":"1.8.2"}}' > package.json \
+RUN printf '%s' '{"name":"sport-runtime","private":true,"overrides":{"compression":"1.8.2"}}' > package.json \
 	&& npm install --omit=dev --no-fund --no-audit serve@14.2.6 \
 	&& npm cache clean --force
 ENV PATH=/opt/serve/node_modules/.bin:$PATH
