@@ -1,4 +1,4 @@
-FROM node:26.12.1-alpine AS builder
+FROM node:26.13.1-alpine AS builder
 RUN npm install -g npm@11
 
 WORKDIR /app
@@ -10,7 +10,7 @@ COPY . .
 RUN npm run build
 
 
-FROM node:26.12.1-alpine AS runner
+FROM node:26.13.1-alpine AS runner
 RUN npm install -g npm@11
 
 # serve@14.2.x pins compression to exactly 1.8.1 (CVE-2026-87776, fixed in 1.8.2) and npm
